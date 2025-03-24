@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - Schadenfreude</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Schadenfreude</h1>
+                <p class="tagline">German Automotive Excellence</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collection.html" class="active">Collection</a>
+                <a href="history.html">History</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Collection Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Prestigious Collection</h1>
+            <p>Explore our curated selection of the finest German automobiles spanning decades of engineering excellence.</p>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="collection">
+        <div class="container">
+            <h2 class="section-title">Browse Our Collection</h2>
+            <div class="collection-tabs">
+                <button class="tab-btn active" data-era="all">All Eras</button>
+                <button class="tab-btn" data-era="vintage">Vintage (Pre-1960)</button>
+                <button class="tab-btn" data-era="classic">Classic (1960-1990)</button>
+                <button class="tab-btn" data-era="modern">Modern (1990-2010)</button>
+                <button class="tab-btn" data-era="contemporary">Contemporary (2010+)</button>
+            </div>
+            <div class="collection-grid">
+                <!-- Cars will be dynamically loaded here via JavaScript -->
+                <div class="featured-card">
+                    <div class="card-image" style="background-image: url('https://source.unsplash.com/600x400/?mercedes,classic')"></div>
+                    <div class="card-content">
+                        <h3>Mercedes-Benz 190SL</h3>
+                        <p class="year">1955-1963</p>
+                        <p>A beautiful open-top touring car known for its elegant styling and comfortable ride.</p>
+                        <a href="#" class="btn-text">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image" style="background-image: url('https://source.unsplash.com/600x400/?bmw,vintage')"></div>
+                    <div class="card-content">
+                        <h3>BMW 507</h3>
+                        <p class="year">1956-1959</p>
+                        <p>One of BMW's most beautiful roadsters and a milestone in automotive design.</p>
+                        <a href="#" class="btn-text">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image" style="background-image: url('https://source.unsplash.com/600x400/?porsche,vintage')"></div>
+                    <div class="card-content">
+                        <h3>Porsche 356</h3>
+                        <p class="year">1948-1965</p>
+                        <p>The first production automobile from Porsche and the foundation of the brand's legacy.</p>
+                        <a href="#" class="btn-text">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image" style="background-image: url('https://source.unsplash.com/600x400/?mercedes,amg')"></div>
+                    <div class="card-content">
+                        <h3>Mercedes-AMG GT</h3>
+                        <p class="year">2015-Present</p>
+                        <p>A modern grand tourer combining luxury with breathtaking performance.</p>
+                        <a href="#" class="btn-text">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image" style="background-image: url('https://source.unsplash.com/600x400/?bmw,m3')"></div>
+                    <div class="card-content">
+                        <h3>BMW M3 E30</h3>
+                        <p class="year">1986-1991</p>
+                        <p>The original M3, a homologation special that became a performance icon.</p>
+                        <a href="#" class="btn-text">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="card-image" style="background-image: url('https://source.unsplash.com/600x400/?audi,quattro')"></div>
+                    <div class="card-content">
+                        <h3>Audi Quattro</h3>
+                        <p class="year">1980-1991</p>
+                        <p>The revolutionary all-wheel-drive sports coupe that changed rallying forever.</p>
+                        <a href="#" class="btn-text">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-cta">
+                <p>Our collection is constantly evolving with new acquisitions and special exhibits.</p>
+                <a href="contact.html" class="btn btn-primary">Inquire About Our Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Schadenfreude</h2>
+                    <p>German Automotive Excellence</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collection.html">Collection</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Featured Brands</h3>
+                        <ul>
+                            <li><a href="#">Mercedes-Benz</a></li>
+                            <li><a href="#">BMW</a></li>
+                            <li><a href="#">Porsche</a></li>
+                            <li><a href="#">Audi</a></li>
+                            <li><a href="#">Volkswagen</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="newsletter">
+                            <h4>Subscribe to Our Newsletter</h4>
+                            <form id="newsletterForm">
+                                <input type="email" placeholder="Your Email" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Schadenfreude. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

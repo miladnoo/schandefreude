@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Schadenfreude</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for the gallery page */
+        .gallery-container {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+        
+        .gallery-container .section-title {
+            color: var(--light-text);
+        }
+        
+        .gallery-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-expanded {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .gallery-item {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 31, 20, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .gallery-overlay h3 {
+            color: var(--light-text);
+            margin-bottom: 5px;
+        }
+        
+        .gallery-overlay p {
+            color: var(--secondary-light);
+            margin-bottom: 15px;
+        }
+        
+        .testimonials-alt {
+            background-color: var(--bg-dark);
+            color: var(--text-color);
+        }
+        
+        .testimonials-alt .section-title {
+            color: var(--secondary-color);
+        }
+        
+        .testimonial-content-alt {
+            background-color: var(--primary-dark);
+            border: 1px solid var(--secondary-color);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .testimonial-content-alt p {
+            color: var(--text-color);
+        }
+        
+        .testimonial-author-alt h4 {
+            color: var(--secondary-color);
+        }
+        
+        .testimonial-author-alt p {
+            color: var(--light-gray);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Schadenfreude</h1>
+                <p class="tagline">German Automotive Excellence</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collection.html">Collection</a>
+                <a href="history.html">History</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Gallery of Excellence</h1>
+            <p>Feast your eyes on our stunning collection of German automotive masterpieces.</p>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-container">
+        <div class="container">
+            <h2 class="section-title">Visual Showcase</h2>
+            
+            <div class="gallery-categories">
+                <button class="tab-btn active">All</button>
+                <button class="tab-btn">Mercedes-Benz</button>
+                <button class="tab-btn">BMW</button>
+                <button class="tab-btn">Porsche</button>
+                <button class="tab-btn">Audi</button>
+                <button class="tab-btn">Volkswagen</button>
+            </div>
+            
+            <div class="gallery-expanded">
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?mercedes,amg'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Mercedes-AMG GT</h3>
+                        <p>2015</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?bmw,vintage'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>BMW 507</h3>
+                        <p>1956</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?porsche,classic'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Porsche 911 Carrera RS</h3>
+                        <p>1973</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?audi,rs'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Audi RS2</h3>
+                        <p>1994</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?volkswagen,classic'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Volkswagen Beetle</h3>
+                        <p>1965</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?mercedes,interior'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Mercedes-Benz S-Class Interior</h3>
+                        <p>2020</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?porsche,911'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Porsche 911 Turbo S</h3>
+                        <p>2021</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?bmw,m3'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>BMW M3 Competition</h3>
+                        <p>2021</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?audi,etron'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Audi e-tron GT</h3>
+                        <p>2022</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?mercedes,300sl'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Mercedes-Benz 300SL Gullwing</h3>
+                        <p>1954</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?bmw,i8'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>BMW i8</h3>
+                        <p>2018</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/600x400/?porsche,taycan'); background-size: cover; background-position: center;">
+                    <div class="gallery-overlay">
+                        <h3>Porsche Taycan</h3>
+                        <p>2020</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials with Light Background -->
+    <section class="testimonials testimonials-alt">
+        <div class="container">
+            <h2 class="section-title">Visitor Experiences</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <div class="testimonial-content testimonial-content-alt">
+                        <p>"The gallery showcases these automotive masterpieces in a way that truly highlights their beauty and engineering excellence. Each photograph tells a story."</p>
+                        <div class="testimonial-author testimonial-author-alt">
+                            <h4>Thomas Weber</h4>
+                            <p>Photography Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Schadenfreude</h2>
+                    <p>German Automotive Excellence</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collection.html">Collection</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Featured Brands</h3>
+                        <ul>
+                            <li><a href="#">Mercedes-Benz</a></li>
+                            <li><a href="#">BMW</a></li>
+                            <li><a href="#">Porsche</a></li>
+                            <li><a href="#">Audi</a></li>
+                            <li><a href="#">Volkswagen</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="newsletter">
+                            <h4>Subscribe to Our Newsletter</h4>
+                            <form id="newsletterForm">
+                                <input type="email" placeholder="Your Email" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Schadenfreude. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

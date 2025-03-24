@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Schadenfreude</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for the contact page */
+        .map-container {
+            height: 400px;
+            background-color: var(--light-gray);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact-alt {
+            background-color: var(--bg-light);
+            color: var(--text-color);
+        }
+        
+        .contact-alt .section-title {
+            color: var(--light-text);
+        }
+        
+        .contact-info-card {
+            background-color: var(--primary-dark);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .contact-info-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-info-alt p {
+            color: var(--text-color);
+        }
+        
+        .contact-item-alt h4 {
+            color: var(--secondary-color);
+        }
+        
+        .contact-item-alt p {
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Schadenfreude</h1>
+                <p class="tagline">German Automotive Excellence</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collection.html">Collection</a>
+                <a href="history.html">History</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>Visit our collection or reach out to us for inquiries and appointments.</p>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-container">
+        <!-- Replace with actual Google Maps embed code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d170129.55137543752!2d11.3455975!3d48.1550534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75f9a38c5fd9%3A0x10cb84a7db1987d!2sMunich%2C%20Germany!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Contact Section with Light Background -->
+    <section id="contact" class="contact contact-alt">
+        <div class="container">
+            <div class="contact-info-card">
+                <h3>Visit Our Collection</h3>
+                <p>Experience the beauty and engineering excellence of German automobiles in person. Schedule a visit or inquire about our collection.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info contact-info-alt">
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="contact-details">
+                        <div class="contact-item contact-item-alt">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Automobilstrasse 1, Munich, Germany</p>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-item-alt">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Opening Hours</h4>
+                                <p>Tuesday - Sunday: 10:00 - 18:00</p>
+                                <p>Closed on Mondays</p>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-item-alt">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+49 89 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item contact-item-alt">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@schadenfreude-cars.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Schadenfreude</h2>
+                    <p>German Automotive Excellence</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collection.html">Collection</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Featured Brands</h3>
+                        <ul>
+                            <li><a href="#">Mercedes-Benz</a></li>
+                            <li><a href="#">BMW</a></li>
+                            <li><a href="#">Porsche</a></li>
+                            <li><a href="#">Audi</a></li>
+                            <li><a href="#">Volkswagen</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="newsletter">
+                            <h4>Subscribe to Our Newsletter</h4>
+                            <form id="newsletterForm">
+                                <input type="email" placeholder="Your Email" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Schadenfreude. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
